@@ -21,7 +21,7 @@ jobs:
         run: |
           docker buildx build --push \
             -f Dockerfile \
-            --tag manologcode/mypyal3.9:latest \
+            --tag manologcode/mypyal3.7:latest \
             --platform linux/amd64,linux/arm64,linux/arm/v7 .
 
 

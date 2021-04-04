@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.7-alpine
 
 RUN apk update \
     && apk add --virtual build-deps gcc python3-dev musl-dev
