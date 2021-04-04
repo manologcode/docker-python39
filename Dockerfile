@@ -1,5 +1,8 @@
 FROM python:3.9-alpine
 
+RUN apk update \
+    && apk add --virtual build-deps gcc python3-dev musl-dev
+
 WORKDIR /app
 
 COPY ./app /app
