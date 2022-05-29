@@ -1,8 +1,8 @@
-# DOCKER PYTHON 3.7
+# DOCKER PYTHON 3.10
 
 Se trata de un entorno sencillo docker para crear y desarrollar aplicaciones en phyton y deployarlas.
 
-Tiene dos dockerfiles, uno para cada entorno son contenedores ligeros de con python 3.7 sobre Alpine
+Tiene dos dockerfiles, uno para cada entorno son contenedores ligeros de con python 3.10 sobre Alpine
 
 ## ENTORNO DESARROLLO
 
@@ -33,13 +33,13 @@ para ver la aplicación en el navegador
 
 Si necesitamos reconstruir la imagen para ponerle nuevo o personalizarla (poner cada uno el nombre que quiera)
 
-    docker build -f DockerfileDevelopment --no-cache --pull . -t manologcode/mypyal3.7
+    docker build -f DockerfileDevelopment --no-cache --pull . -t manologcode/mypyal3.10
 
 para subirla a docker-hub
 
     docker login --username=manologcode
 
-    docker push manologcode/mypyal3.7
+    docker push manologcode/mypyal3.10
 
 ## ENTORNO PRODUCCIÓN
 
@@ -47,6 +47,6 @@ En producción esta pensado que los archivos y las librerías se copien dentro d
 
 para corre la imagen
 
-    docker run -it -rm --name=appflask -p 8080:80 -v $PWD/app:/app manologcode/mypyal3.7
+    docker run -it -rm --name=appflask -p 8080:80 -v $PWD/app:/app manologcode/mypyal3.10
 
     http://localhost:8080/
