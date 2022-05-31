@@ -17,11 +17,16 @@ jobs:
           version: latest
       - name: login to docker hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-      - name: build the image Python310
+      - name: build the image Python310 - mypyal3.10
         run: |
           docker buildx build --push \
             -f Dockerfile \
             --tag manologcode/mypyal3.10:latest \
             --platform linux/amd64,linux/arm64,linux/arm/v7 .
-
+      - name: build the image Python310 - mybual3.10
+        run: |
+          docker buildx build --push \
+            -f DockerfileDevelopment \
+            --tag manologcode/mybual3.10:latest \
+            --platform linux/amd64,linux/arm64,linux/arm/v7 .
 

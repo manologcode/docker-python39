@@ -33,7 +33,7 @@ para ver la aplicación en el navegador
 
 Si necesitamos reconstruir la imagen para ponerle nuevo o personalizarla (poner cada uno el nombre que quiera)
 
-    docker build -f DockerfileDevelopment --no-cache --pull . -t manologcode/mypyal3.10
+    docker build -f DockerfileDevelopment --no-cache --pull . -t manologcode/mypyal-dev3.10
 
 para subirla a docker-hub
 

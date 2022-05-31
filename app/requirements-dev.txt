@@ -1,0 +1,11 @@
+Flask
+Flask-WTF
+Flask-SQLAlchemy
+Flask-Login
+Flask-Migrate
+Flask-Mail
+flask-cors
+gunicorn
+libsass
+rcssmin
+rjsmin
